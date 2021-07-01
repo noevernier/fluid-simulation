@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DCE18C2B268D1181000D07CF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCE18C2A268D1181000D07CF /* main.cpp */; };
+		DCE18C35268D11EF000D07CF /* libpng14.la in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE18C33268D11EF000D07CF /* libpng14.la */; };
+		DCE18C36268D11EF000D07CF /* libpng14.14.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE18C34268D11EF000D07CF /* libpng14.14.dylib */; };
+		DCE18C3A268D129E000D07CF /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCE18C38268D129E000D07CF /* utils.cpp */; };
+		DCE18C3E268D13D4000D07CF /* fluid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCE18C3C268D13D4000D07CF /* fluid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +30,12 @@
 		DCE18C27268D1181000D07CF /* FluidSimulation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FluidSimulation; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE18C2A268D1181000D07CF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DCE18C2C268D1181000D07CF /* olcPixelGameEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = olcPixelGameEngine.h; sourceTree = "<group>"; };
+		DCE18C33268D11EF000D07CF /* libpng14.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libpng14.la; path = ../../../../../../Library/Frameworks/Mono.framework/Versions/6.12.0/lib/libpng14.la; sourceTree = "<group>"; };
+		DCE18C34268D11EF000D07CF /* libpng14.14.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng14.14.dylib; path = ../../../../../../Library/Frameworks/Mono.framework/Versions/6.12.0/lib/libpng14.14.dylib; sourceTree = "<group>"; };
+		DCE18C38268D129E000D07CF /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
+		DCE18C39268D129E000D07CF /* utils.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utils.hpp; sourceTree = "<group>"; };
+		DCE18C3C268D13D4000D07CF /* fluid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fluid.cpp; sourceTree = "<group>"; };
+		DCE18C3D268D13D4000D07CF /* fluid.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fluid.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE18C35268D11EF000D07CF /* libpng14.la in Frameworks */,
+				DCE18C36268D11EF000D07CF /* libpng14.14.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,7 @@
 			children = (
 				DCE18C29268D1181000D07CF /* FluidSimulation */,
 				DCE18C28268D1181000D07CF /* Products */,
+				DCE18C32268D11EF000D07CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +71,39 @@
 		DCE18C29268D1181000D07CF /* FluidSimulation */ = {
 			isa = PBXGroup;
 			children = (
+				DCE18C3B268D135A000D07CF /* fluid */,
+				DCE18C37268D1291000D07CF /* utils */,
 				DCE18C2A268D1181000D07CF /* main.cpp */,
 				DCE18C2C268D1181000D07CF /* olcPixelGameEngine.h */,
 			);
 			path = FluidSimulation;
+			sourceTree = "<group>";
+		};
+		DCE18C32268D11EF000D07CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCE18C34268D11EF000D07CF /* libpng14.14.dylib */,
+				DCE18C33268D11EF000D07CF /* libpng14.la */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCE18C37268D1291000D07CF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				DCE18C38268D129E000D07CF /* utils.cpp */,
+				DCE18C39268D129E000D07CF /* utils.hpp */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		DCE18C3B268D135A000D07CF /* fluid */ = {
+			isa = PBXGroup;
+			children = (
+				DCE18C3C268D13D4000D07CF /* fluid.cpp */,
+				DCE18C3D268D13D4000D07CF /* fluid.hpp */,
+			);
+			path = fluid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE18C3E268D13D4000D07CF /* fluid.cpp in Sources */,
 				DCE18C2B268D1181000D07CF /* main.cpp in Sources */,
+				DCE18C3A268D129E000D07CF /* utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +315,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = arm64;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/Mono.framework/Versions/6.12.0/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -279,6 +328,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = arm64;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks/Mono.framework/Versions/6.12.0/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
